@@ -21,7 +21,7 @@ fs.readdirSync(targetFolderPath).forEach(file => {
   let newFileName;
   
   if (breakaway && fileName.includes(breakaway)) {
-    newFileName = prefix + newFileName.split(breakaway)[1] + breakaway + suffix;
+    newFileName = prefix + fileName.split(breakaway)[1] + breakaway + suffix;
   } else {
     newFileName = prefix + fileName.replace(toReplace, replaceWith) + suffix;
   }
